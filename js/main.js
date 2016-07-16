@@ -1,19 +1,11 @@
-function closeMe(){
-      // Find the element
-   		x=document.getElementById("demo");
-       //Option 1: Change the style attribute directly
-   		x.style.display="none";
-  
-      //Option 2: Change the class
-   		 // x.className="closed";
-	}
+function upDate(previewPic){
+  var src = previewPic.getAttribute("src");
+  var alt = previewPic.getAttribute("alt");
+  document.getElementById('image').style.backgroundImage = "url('" + src + "')";
+  document.getElementById('image').innerHTML = alt;
+}
 
-function openMe(){
-      // Find the element
-   		x=document.getElementById("demo");
-      //Option 1: Change the style attribute directly
-   		 x.style.display="block";
-      
-      //Option 2: Change the class
-   		 // x.className="open";
-	}
+function unDo(){
+  document.getElementById('image').style.backgroundImage = "none";
+  document.getElementById('image').innerHTML = "Hover over an image below to display here";
+}
